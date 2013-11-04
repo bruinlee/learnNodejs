@@ -1,3 +1,4 @@
+var express = require("express");
 var http = require("http");
 var url = require("url");
 
@@ -14,8 +15,16 @@ function start(route, handle){
     //response.end();
   }
 
-  http.createServer(onRequest).listen(8888);
-
+  http.createServer(onRequest).listen(8888, '192.168.0.6');
+  /*
+  http.createServer(onRequest).listen(8888,function(){
+    server.close(function(){
+      server.listen(8001, '192.168.0.202');
+    });
+  });
+  */
+  //var server = http.createServer(app);
+  //server.listen(8001, '192.168.0.255');
   console.log("Server has started.");
 
 }
