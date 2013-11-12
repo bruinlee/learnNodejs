@@ -15,7 +15,7 @@ function start(route, handle){
     //response.end();
   }
 
-  http.createServer(onRequest).listen(8888, '192.168.0.6');
+  http.createServer(onRequest).listen(8888);
   /*
   http.createServer(onRequest).listen(8888,function(){
     server.close(function(){
